@@ -12,7 +12,7 @@ session_destroy();
 ignore_user_abort(true);
 set_time_limit(0);
 date_default_timezone_set("Asia/Dhaka");
-$get_tasks_url = "http://45.125.222.202/subscriptionservices_test/services/subscriber/SubscriberService_price.php";
+$get_tasks_url = "http://localhost/subscriptionservices_test/services/subscriber/SubscriberService_price.php";
 
 $current_date = date("Y-m-d");
 $cn = connectDB();
