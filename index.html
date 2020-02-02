@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <title>DOZE CRM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!--============================= Framework defined css =============================-->
+    <link href="ssd_crm/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+    <!--============================= user defined css =============================-->
+    <link href="ssd_crm/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="ssd_crm/css/datePicker/datepicker3.css" rel="stylesheet" type="text/css"/>
+    <link href="ssd_crm/css/datePicker/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css"/>
+    <!--============================= plug-in css  ============================================================-->
+    <link href="ssd_crm/css/popup/jquery_confirm_plugin.css" rel="stylesheet" type="text/css"/>
+    <link href="ssd_crm/css/datatable/jquery.dataTables_themeroller.css" rel="stylesheet" type="text/css"/>
+    <link href="ssd_crm/css/datatable/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
+    <link href="ssd_crm/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css"/>
+    <link href="ssd_crm/css/datatable/dataTables.tableTools.css" rel="stylesheet" type="text/css"/>
+    <link href="ssd_crm/css/datatable/dataTables.fixedColumns.css" rel="stylesheet" type="text/css"/>
+    <link href="ssd_crm/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="ssd_crm/css/responsive.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <!--  <link href="ssd_crm/css/datatable/dataTables.responsive.css" rel="stylesheet" type="text/css"/> -->
+    <link href="ssd_crm/css/droupdown/chosen.css" rel="stylesheet" type="text/css"/>
+    <link href="ssd_crm/css/jquery-ui.css" rel="stylesheet" type="text/css"/>    
+    
+    
+    <!--============================= Site related custom js =============================-->
+    <link href="ssd_crm/css/smsDoze-custom.css" rel="stylesheet" type="text/css"/>
+    <link href="ssd_crm/css/style.css" rel="stylesheet" type="text/css"/>
+
+    <link href="ssd_crm/css/dhakagate_custom.css" rel="stylesheet" type="text/css"/>
+    <link href="ssd_crm/css/ssd_crm_custom.css" rel="stylesheet" type="text/css"/>
+    <link href="ssd_crm/css/notify/notify.css" rel="stylesheet" type="text/css">
+
+</head>
+<body id="body">
+
+<noscript>
+    Please use HTML5 supported browser.<br>
+    For full functionality of this page it is necessary to enable JavaScript.<br>
+    Here are the
+    <a href="http://www.enable-javascript.com/" target="_blank"> instructions how to enable JavaScript in your web
+        browser</a>
+</noscript>
+
+
+<div class="container-fluid">
+
+    <div class="header"></div>
+
+    <!-- this div is for left menu bar-->
+    <div id="left_menu_area" style="background: #F6F6F6; height: 100%;">
+
+    </div>
+    <!-- end of left menu bar-->
+
+
+    <div id="main_body_area">
+        <div id="id_loading_image" class="centered" style="display: none; text-align: center; position: fixed; z-index: 999999; top: 40%; left: 44%;">
+            <img src="ssd_crm/img/LoadingStarGreen.gif" alt="....LOADING......" width="180px" height="180px">
+        </div>
+        <div id="message_display">
+            <!-- ============================ start Show message alert ========================== -->
+
+            <!-- =============================End Show message alert====================== -->
+        </div>
+        <div class="container-fluid" id="contentService">
+            <div class="row">
+                <div id="cmsData">
+                    <!-- =======================================================================================-->
+
+                    <!-- =======================================================================================-->
+                </div>
+            </div>
+        </div>
+        <input type="hidden" id="previous_filter" value="-1" name="previous_filter">
+        <input type="hidden" id="lead_source_filter" value="-1" name="current_filter">
+
+        <!-- Footer -->
+        <footer id="footer" class="footer-padding"></footer>
+    </div>
+
+</div>
+
+<!--============================= Framework js =============================-->
+<script src="WebFramework/HTML5/jqry/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="WebFramework/HTML5/jqry/modernizr.custom.js" type="text/javascript"></script>
+<script src="WebFramework/HTML5/lib/utils.js" type="text/javascript"></script>
+<script src="WebFramework/HTML5/lib/cmscore.js" type="text/javascript"></script>
+<script src="WebFramework/HTML5/lib/validationEngine.js" type="text/javascript"></script>
+<script src="WebFramework/HTML5/lib/tableEngine.js" type="text/javascript"></script>
+<script src="ssd_crm/js/notify/notify.js"></script>
+
+<!--============================= Site related plugin builtin js =============================-->
+<script src="ssd_crm/js/jquery-ui.js" type="text/javascript"></script>
+<script src="ssd_crm/js/Jeditable/jquery.jeditable.js" type="text/javascript"></script>
+<script src="ssd_crm/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="ssd_crm/js/datePicker/bootstrap-datepicker.js" type="text/javascript"></script>
+<script src="ssd_crm/js/datePicker/bootstrap-datetimepicker.js" type="text/javascript"></script>
+<!--<script src="ssd_crm/js/Jeditable/jquery.jeditable.datepicker.js" type="text/javascript"></script>-->
+<script src="ssd_crm/js/popup/jquery_confirm_plugin.js" type="text/javascript"></script>
+<script src="ssd_crm/js/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="ssd_crm/js/dataTables.buttons.min.js" type="text/javascript"></script>
+<script src="ssd_crm/js/datatable/dataTables.tableTools.js" type="text/javascript"></script>
+<!--script src="doze_crm/js/datatable/dataTables.fixedColumns.js" type="text/javascript"></script-->
+
+<script src="ssd_crm/js/dataTables.bootstrap.min.js" type="text/javascript"></script>
+<script src="ssd_crm/js/dataTables.responsive.min.js" type="text/javascript"></script>
+<script src="ssd_crm/js/responsive.bootstrap.min.js" type="text/javascript"></script>
+
+
+<script src="ssd_crm/js/droupdown/chosen.jquery.js" type="text/javascript"></script>
+
+<!--============================= Site related js =============================-->
+<script src="ssd_crm/js/config.js" type="text/javascript"></script>
+<script src="ssd_crm/js/common.js" type="text/javascript"></script>
+
+<script src="ssd_crm/js/popup/plugin_edited_finction.js" type="text/javascript"></script>
+<script src="ssd_crm/js/errorHandling.js" type="text/javascript"></script>
+
+<script src="ssd_crm/js/home.js" type="text/javascript"></script>
+<script src="ssd_crm/js/commonDropDown.js" type="text/javascript"></script>
+<script src="ssd_crm/js/user_login.js" type="text/javascript"></script>
+
+<!--============================= Start Monir Code =============================-->
+
+<script src="ssd_crm/js/report.js" type="text/javascript"></script>
+<script src="ssd_crm/js/notification.js" type="text/javascript"></script>
+
+<!--============================= End Monir Code =============================-->
+
+<!--============================= Start Nazibul Code=============================-->
+<script src="ssd_crm/js/database_editor_custom.js" type="text/javascript"></script>
+<script src="ssd_crm/js/workflow.js" type="text/javascript"></script>
+<script src="ssd_crm/js/task.js" type="text/javascript"></script>
+<script src="ssd_crm/js/otrs.js" type="text/javascript"></script>
+<script src="ssd_crm/js/work_flow_task_manage.js" type="text/javascript"></script>
+<!--============================= End Nazibul Code=============================-->
+
+<!--============================= Start Mahmud Code=============================-->
+<script src="ssd_crm/js/contacts.js" type="text/javascript"></script>
+<script src="ssd_crm/js/sales_representative.js" type="text/javascript"></script>
+<script src="ssd_crm/js/user_registration.js" type="text/javascript"></script>
+<script src="ssd_crm/js/sales_representative_group_creation.js" type="text/javascript"></script>
+<script src="ssd_crm/js/create_new_contact.js" type="text/javascript"></script>
+<script src="ssd_crm/js/generic_search_page.js" type="text/javascript"></script>
+<script src="ssd_crm/js/load_contact.js" type="text/javascript"></script>
+
+<!--============================= End Mahmud Code =============================-->
+
+<!--============================= Start danial Code=============================-->
+<script src="ssd_crm/js/fin_accounts.js" type="text/javascript"></script>
+
+<!--============================= End danial Code=============================-->
+</body>
+</html>
+
+
+
